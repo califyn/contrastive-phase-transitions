@@ -1,6 +1,6 @@
 # Phase Transitions in Contrastive Learning
 
-This is the repository for _Studying Phase Transitions in Contrastive Learning with Physics-Inspired Datasets_, to appear in the Physics for Machine Learning Workshop at ICLR 2023.
+This is the repository for _Studying Phase Transitions in Contrastive Learning with Physics-Inspired Datasets_, to appear in the Physics for Machine Learning Workshop at ICLR 2023. [[Openreview]](https://openreview.net/forum?id=djssHWljSA)
 
 First, to set up all the requirements, run the following from the root:
 ```shell
