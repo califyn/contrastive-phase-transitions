@@ -1,0 +1,5 @@
+saved_models/*
+saved_datasets/*
+**/*.pyc
+ldcl.egg-info*
+**/*.html
