@@ -11,6 +11,13 @@ from scipy.signal import savgol_filter
 
 from .color import get_cmap
 
+
+def pretty_print(obj):
+            if isinstance(obj, float):
+                return np.format_float_positional(obj, precision=4)
+            else:
+                return obj
+
 def plot_loss(metric, title, save_progress_path, xlabel = 'Epochs', ylabel = 'Loss', save_name = 'training_loss.png'):
     metric = savgol_filter(metric, 51, 3)
     plt.figure()
@@ -209,7 +216,7 @@ class VisPlot:
                         line=dict(width=outline_width, color='black'),
                         opacity=1
                     ),
-                    text=["<br>".join([f"{k}={np.format_float_positional(v[i], precision=4)}" for k, v in label.items()]) for i in range(np.shape(points)[0])]
+                    text=["<br>".join([f"{k}={pretty_print(v[i])}" for k, v in label.items()]) for i in range(np.shape(points)[0])]
                 ), 1, plot + 1)
 
     def add_with_cmap(self, points, label, cmap=None, cby=None, **otherargs):
